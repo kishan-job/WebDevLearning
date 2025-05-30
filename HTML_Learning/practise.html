@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" >
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" required id="firstName" name="firstName" placeholder="Enter your first Name" > <br>
+            <label for ="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Enter your Last name" name="lastName" required>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="option1" value="male">
+            <label for="option1">Male</label>
+            <input type="radio" name="gender" id="option2" value="female">
+            <label for="option2">Female</label>
+        </div>
+        <div>
+            
+            <form action="/reset-password" method="POST">
+                <label for="question">Select a secret question:</label>
+                <select name="question" id="question" required>
+                  <option value="pet">What is the name of your first pet?</option>
+                  <option value="school">What is the name of your primary school?</option>
+                  <option value="city" selected>What is the name of the city where you were born?</option>
+                </select>
+                <label for="answer">Enter your secret answer:</label>
+                <input type="password" name="answer" id="answer" required>
+                <input type="submit" value="Reset Password">
+              </form>
+              
+        </div>
+    </form>
+</body>
+</html>

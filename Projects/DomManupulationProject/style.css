@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+div {
+  background-color: #89bdd7;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unorderedList {
+  background-color: white;
+  color: black;
+}
+
+.list {
+  padding: 20px;
+}
+
+.spanTag{
+  margin-left: 80px;
+  float: right;
+}
+
+button{
+  position: relative;
+  color: #e2d8d8;
+  font-size: large;
+  left: 45%;
+  padding: 5px 35px;
+  background-color: rgb(222, 98, 98);
+}

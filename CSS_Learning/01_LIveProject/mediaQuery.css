@@ -1,0 +1,193 @@
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .hero-container-right > h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  nav.navbar-container {
+    font-size: 1.1rem;
+  }
+
+  nav .button-group .nav-button {
+    font-size: 1.1rem;
+  }
+
+  .hero-container > div:first-of-type > img {
+    height: 68%;
+    top: 19%;
+  }
+
+  .square img {
+    position: absolute;
+    height: 30vw;
+    width: 20vw;
+    bottom: 7%;
+    left: 12%;
+  }
+
+  .hero-container-right > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  nav.navbar-container {
+    font-size: 1.1rem;
+  }
+
+  nav .button-group .nav-button {
+    font-size: 1.1rem;
+  }
+
+  .hero-container > div:first-of-type > img {
+    height: 68%;
+    top: 19%;
+  }
+
+  .square img {
+    height: 30vw;
+    bottom: 7%;
+    left: 12%;
+  }
+
+  .hero-container-right > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+  [alt="brand-logo"] {
+    height: 7vh;
+    width: 10vw;
+  }
+
+  nav.navbar-container {
+    font-size: 1rem;
+  }
+
+  nav .button-group .nav-button {
+    width: 13vw;
+    height: 5vh;
+    font-size: 1rem;
+  }
+
+  .hero-container > div:first-of-type > img {
+    height: 68%;
+    top: 19%;
+  }
+
+  .square img {
+    height: 30vw;
+    bottom: 7%;
+    left: 12%;
+  }
+
+  .hero-container-right > h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-container::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 506px) and (max-width: 630px) {
+  nav ul.list {
+    display: none;
+  }
+
+  nav .button-group .nav-button {
+    width: 23vw;
+    height: 5vh;
+  }
+
+  .globe {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 506px) {
+  nav ul.list {
+    display: none;
+  }
+
+  nav .button-group .nav-button {
+    width: 23vw;
+    height: 5vh;
+  }
+
+  .globe {
+    width: 60px;
+    height: 60px;
+  }
+
+  [alt="brand-logo"] {
+    width: 24vw;
+  }
+
+  .hero-container > div:first-of-type > img {
+    position: absolute;
+    top: 0;
+    height: 35vh;
+    width: 60vw;
+    left: 10%;
+    top: 5%;
+  }
+
+  .globe {
+    position: relative;
+    top: 10%;
+    left: 0;
+  }
+  
+  .globe img {
+    width: 50px;
+  }
+  
+  .square img {
+    position: relative;
+    display: block;
+    height: 35vh;
+    width: 60%;
+    top: 13%;
+    left:30%
+  }
+  .star {
+    position: relative;
+    left: 70%;
+  top: 15%;
+  }
+  .star > img {
+    width: 50px;
+  }
+
+  .hero-container-right {
+    width: 100%;
+    float: none;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ****************** */
+
+  
+  .hero-container-right > h1 {
+    /* font-size: 3.6rem; */
+    position: relative;
+    top: 12%;
+    text-align: center;
+  }
+  
+  .hero-container-right > p {
+    position: relative;
+    top: 8%;
+    width: 80%;
+    text-align: center;
+  }
+
+}

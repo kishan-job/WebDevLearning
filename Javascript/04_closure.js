@@ -20,7 +20,12 @@ function createCounter() {
   return increment; // Return the inner function (closure)
 }
 
-const counter1 = createCounter();
+const counter1 = createCounter(); // counter1 now' holds a reference to the function createCounter with its own private  count variable in the scope create by the call to createCounter()
+
+//✅ var callone = onefun(); creates a closure because you store the returned twofun function to call later.
+
+❌ var callTWO = onefun()(); does NOT create a reusable closure—it simply calls the function once and gets a number.
+
 const counter2 = createCounter();
 
 console.log(counter1()); // 1

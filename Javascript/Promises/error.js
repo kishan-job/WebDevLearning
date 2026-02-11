@@ -1,6 +1,6 @@
 // // .then and .catch we need to pass the callback as the arguments
 
-// const fetchUsers = fetch("https://reqres.in/api/users/l");
+// const fetchUsers = fetch("https://reqres.in/api/users/l-");
 // fetchUsers
 //   .then((resp) => {
 //     if (!resp.ok) {

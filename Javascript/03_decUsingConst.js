@@ -9,5 +9,9 @@ const greeting = "Hi!";
 const person = { name: "Alice", age: 30 };
 
 person.age = "31";
+person.a = 9
+console.log(person["age"]);
 
-console.log(person);
+  
+
+

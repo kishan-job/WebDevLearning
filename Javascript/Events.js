@@ -9,6 +9,7 @@
 // Form Events: submit, change, focus, blur
 // Window Events: load, resize, scroll
 // Clipboard Events: copy, cut, paste
+
 // 2. Event Listeners
 // To handle events, we use event listeners. The addEventListener() method allows us to attach an event to an element without modifying its HTML.
 

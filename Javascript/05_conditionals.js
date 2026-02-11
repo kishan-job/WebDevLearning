@@ -21,14 +21,14 @@
 //       // code to be executed if expression doesn't match any case
 //   }
 
-let dateObject = new Date(2124, 20);
+let dateObject = new Date(2025, 20);
 console.log(dateObject);
 
 
 
 const person = {
     name: "Alice",
-    greet: function() {
+    greet() {
         console.log("Hello, my name is " + this.name);
     }
 };

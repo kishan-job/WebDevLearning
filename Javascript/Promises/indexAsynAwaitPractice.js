@@ -1,19 +1,18 @@
-// async await eliminates the .then chaining 
+const fetchApi = fetch("https://randomuser.me/api/");
 
-const myPromise = fetch("https://reqres.in/api/users/K");
-
-async function fetchUser() {
+const handle = async () => {
   try {
-    const resp = await myPromise;
-    if (!resp.ok) {
-      throw new Error(`Error status code is: ${resp.status}`);
-      }
-      const userData = await resp.json()
-      console.log(userData.data[0]);
-  } catch (error){
-      console.log(error); 
-      // console.error(error)
-  }
-}
+    const response = await fetchApi;
+    console.log(response);
 
-fetchUser();
+    if (!response.status) {
+      throw new Error("error is", response.status);
+      }
+      
+      const resData =  await response.json()
+      console.log(resData);
+      
+  } catch (error) {}
+};
+
+handle();

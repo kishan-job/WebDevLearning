@@ -56,14 +56,14 @@
 
 // When a function is defined as a method of an object, this refers to that object within the function.
 // JavaScript
-// const person = {
-//   name: "Alice",
-//   greet: function() {
-//     console.log("Hello, my name is " + this.name);
-//   }
-// };
+const person = {
+  name: "Alice",
+  greet: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
 
-// person.greet(); // Output: "Hello, my name is Alice"
+person.greet(); // Output: "Hello, my name is Alice"
 
 // Use code with caution.
 
@@ -71,12 +71,12 @@
 
 // In constructor functions, this refers to the newly created object instance.
 // JavaScript
-// function Person(name) {
-//   this.name = name;
-// }
+function Person(name) {
+  this.name = name;
+}
 
-// const person1 = new Person("Bob");
-// console.log(person1.name); // Output: "Bob"
+const person1 = new Person("Bob");
+console.log(person1.name); // Output: "Bob"
 
 // Context of this: Within getCourseCount, this refers to the user object because the function is invoked as user.getCourseCount(). However, the variable name declared with var within getCourseCount is not a property of the user object itself.
 // Accessing this.name: When you try to access this.name at line 7, you're looking for a property named name on the user object. Since there's no such property on the object itself, this.name is undefined.

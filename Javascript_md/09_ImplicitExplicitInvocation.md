@@ -43,10 +43,12 @@ appendChild()
 removeChild()
 querySelector()
 querySelectorAll()
+
 User Interaction:
 alert()
 confirm()
 prompt()
+
 Timers:
 setTimeout()
 setInterval()

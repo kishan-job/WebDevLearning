@@ -1,26 +1,16 @@
-function fetchUser() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve("User Data ✅"), 1000);
-  });
+async function fetching() {
+  try {
+    const firstFetch = await fetch("https://reqres.in/api/users?page=1", {
+      method: "GET",
+      headers: {
+        "x-api-key": "reqres-free-v1",
+      },
+    });
+      
+      const resp = await firstFetch.json()
+      console.log(resp.data[1].email);
+      
+      
+  } catch (error) {}
 }
-
-function fetchPosts() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve("Posts Data ✅"), 2000);
-  });
-}
-
-function fetchComments() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve("Comments Data ✅"), 1500);
-  });
-}
-
-Promise.all([fetchUser(), fetchPosts(), fetchComments()])
-  .then((results) => {
-    console.log("All data received:");
-    console.log(results); // ["User Data ✅", "Posts Data ✅", "Comments Data ✅"]
-  })
-  .catch((err) => {
-    console.log("Something failed:", err);
-  });
+fetching()

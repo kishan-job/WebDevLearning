@@ -7,7 +7,7 @@
 // Copy code
 for (let i = 0; i < 5; i++) {
   if (i === 3) {
-    continue; // Skip iteration when i is 2 means it didn't exeucte the code below and moved to next iteration
+    continue; // ⬅️ skips when i is 3
   }
   console.log(i);
 }

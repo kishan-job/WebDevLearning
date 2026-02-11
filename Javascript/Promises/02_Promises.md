@@ -1,4 +1,5 @@
 what are promises in js
+
 ChatGPT said:
 In JavaScript, a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises help manage asynchronous code, avoiding "callback hell" and making the code more readable.
 
@@ -34,7 +35,7 @@ Using Promises with Async/Await
 Instead of .then() and .catch(), you can use async/await for better readability.
 
 javascript
-Copy
+Copy  
 Edit
 async function fetchData() {
     try {

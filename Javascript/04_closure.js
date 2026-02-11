@@ -1,4 +1,5 @@
-// Closures in JavaScript are functions that have access to variables from the outer(enclosing) function, even after the outer function has returned.This is possible because closures create a new scope that persists even after the outer function has finished executing.
+// Closures in JavaScript are functions that remember and can access variables from their outer (enclosing) function’s scope, even after that outer function has returned.It works because JavaScript keeps those variables alive in memory for the inner function.
+// This works because JavaScript maintains the scope chain — the inner function keeps a reference to the variables in the outer function, not a copy.
 
 // How Is the State Maintained in Your Code?
 // State is maintained using closures in JavaScript. Closures allow functions to "remember" the variables from their lexical scope, even after the outer function has finished executing.
@@ -29,9 +30,9 @@ console.log(counter2()); // 1 (separate closure with its own count)
 
 // Why the Counters are Independent:
 
-// Each time you call fun(), you are essentially creating a new execution context for that function. Within that context, a fresh count variable is created. The increment function defined within that specific call to fun() forms a closure over that particular count variable.
+// Each time you call createCounter(), you are essentially creating a new execution context for that function. Within that context, a fresh count variable is created. The increment function defined within that specific call to createCounter() forms a closure over that particular count variable.
 
-// Therefore, f1 and f2 hold references to two distinct increment functions, each bound to its own separate count variable created during their respective calls to fun().
+// Therefore, f1 and f2 hold references to two distinct increment functions, each bound to its own separate count variable created during their respective calls to createCounter().
 
 // ********* Here are a few more examples of closures in JavaScript to showcase their versatility:
 

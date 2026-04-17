@@ -87,22 +87,22 @@ const Teacher = Object.create(User, {
 
 
 
-// ******************Constructor-based inheritance: we are going to see object.create
 
-// call / apply → to inherit properties.
+// ****************** Constructor-based inheritance (ES5)
 
-// Object.create → to inherit methods.
-
-// bind → rarely used.
+// call → inherit properties
+// Object.create → inherit prototype methods
 
 
+// =======================
+// 1. PARENT CONSTRUCTOR
+// =======================
 function Person(name, age, city) {
-  // properties
   this.name = name;
   this.age = age;
   this.city = city;
 
-  // methods inside constructor (not efficient but allowed)
+  // ❌ Instance methods (copied per object)
   this.introduce = function() {
     console.log(`Hi, I'm ${this.name} from ${this.city}`);
   };
@@ -112,20 +112,53 @@ function Person(name, age, city) {
   };
 }
 
-// method via prototype
+// ✅ Prototype method (shared)
 Person.prototype.sayHello = function() {
   console.log("Hello from prototype!");
 };
 
 
 
+// =======================
+// 2. CHILD CONSTRUCTOR
+// =======================
 function Student(name, age, city, grade) {
-  Person.call(this, name, age, city); // inherit properties + constructor methods
+
+  // ✔ Copies properties + constructor methods
+  Person.call(this, name, age, city);
+
   this.grade = grade;
 }
-// Inherit methods (prototype chaining)
+
+
+// =======================
+// ❌ CASE 1: WITHOUT PROTOTYPE CHAINING
+// =======================
+
+// const s1 = new Student("Kishan", 23, "Hyderabad", "A");
+
+// s1.introduce(); // ✅ works (from constructor)
+// s1.showAge();   // ✅ works (from constructor)
+
+// ❌ This will FAIL:
+// s1.sayHello();  
+// Error: s1.sayHello is not a function
+
+// 👉 WHY?
+// Because we DID NOT link:
+// Student.prototype → Person.prototype
+// So no access to sayHello()
+
+
+
+// =======================
+// ✅ CASE 2: WITH PROTOTYPE CHAINING
+// =======================
+
+// Link Student → Person prototype
 Student.prototype = Object.create(Person.prototype);
 Student.prototype.constructor = Student;
+
 
 // Child method
 Student.prototype.study = function() {
@@ -133,11 +166,12 @@ Student.prototype.study = function() {
 };
 
 
-const s1 = new Student("Kishan", 23, "Hyderabad", "A");
+// =======================
+// 3. USAGE
+// =======================
+const s2 = new Student("Kishan", 23, "Hyderabad", "A");
 
-s1.introduce(); // From constructor
-s1.showAge();   // From constructor
-s1.sayHello();  // From prototype
-s1.study();     // Child method
-
-
+s2.introduce(); // ✅ works
+s2.showAge();   // ✅ works
+s2.sayHello();  // ✅ NOW works (from prototype)
+s2.study();     // ✅ child method
